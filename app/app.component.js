@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var home_component_1 = require('./components/home/home.component');
+var post_service_1 = require('./components/home/post.service');
 var app_1 = require('./config/app');
 var AppComponent = (function () {
     function AppComponent() {
@@ -23,7 +24,7 @@ var AppComponent = (function () {
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
             providers: [
                 router_deprecated_1.ROUTER_PROVIDERS,
-                app_1.AppConfig
+                post_service_1.PostService
             ]
         }),
         router_deprecated_1.RouteConfig([

@@ -2,6 +2,7 @@ import { Component }       from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { HomeComponent } from './components/home/home.component';
+import { PostService } from './components/home/post.service';
 
 import { AppConfig } from './config/app';
 
@@ -16,7 +17,7 @@ import { AppConfig } from './config/app';
 	directives: [ROUTER_DIRECTIVES],
 	providers: [
 		ROUTER_PROVIDERS,
-		AppConfig
+		PostService
 	]
 })
 
