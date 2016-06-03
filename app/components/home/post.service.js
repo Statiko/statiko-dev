@@ -9,26 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var post_service_1 = require("./post.service");
-var HomeComponent = (function () {
-    function HomeComponent(postService) {
-        this.postService = postService;
+var posts_1 = require("../../database/posts");
+var PostService = (function () {
+    function PostService() {
     }
-    HomeComponent.prototype.ngOnInit = function () {
-        console.log(" I am ready");
-        this.posts = this.postService.getPosts();
+    PostService.prototype.getPosts = function () {
+        return posts_1.POSTS;
     };
-    HomeComponent.prototype.selectPost = function (post) {
-        this.selectedPost = post;
-    };
-    HomeComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "    \n\t\t<h1>{{title}}</h1>\n    \t<h2>My Heroes</h2>\n    "
-        }), 
-        __metadata('design:paramtypes', [post_service_1.PostService])
-    ], HomeComponent);
-    return HomeComponent;
+    PostService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], PostService);
+    return PostService;
 }());
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+exports.PostService = PostService;
+//# sourceMappingURL=post.service.js.map
