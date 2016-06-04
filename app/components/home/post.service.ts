@@ -8,4 +8,8 @@ export class PostService {
 	getPosts() {
 		return POSTS;
 	}
+
+	find( slug ){
+		return 'Temp';
+	}
 }

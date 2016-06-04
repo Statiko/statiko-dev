@@ -16,6 +16,9 @@ var PostService = (function () {
     PostService.prototype.getPosts = function () {
         return posts_1.POSTS;
     };
+    PostService.prototype.find = function (slug) {
+        return 'Temp';
+    };
     PostService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

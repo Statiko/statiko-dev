@@ -6,10 +6,7 @@ import { PostService } from "./post.service"
 
 @Component({
 	selector: 'my-app',
-	template: `    
-		<h1>{{title}}</h1>
-    	<h2>My Heroes</h2>
-    `
+	templateUrl: 'app/components/home/home.component.html'
 })
 
 export class HomeComponent {
@@ -30,5 +27,9 @@ export class HomeComponent {
 
 	selectPost(post : Post){
 		this.selectedPost = post;
+	}
+
+	getPosts() {
+		return this.posts;
 	}
 }

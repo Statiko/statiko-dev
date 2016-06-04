@@ -9,29 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var post_service_1 = require("./post.service");
-var HomeComponent = (function () {
-    function HomeComponent(postService) {
+var post_service_1 = require("../home/post.service");
+var PostViewComponent = (function () {
+    function PostViewComponent(postService) {
         this.postService = postService;
     }
-    HomeComponent.prototype.ngOnInit = function () {
-        console.log(" I am ready");
-        this.posts = this.postService.getPosts();
+    PostViewComponent.prototype.ngOnInit = function () {
+        this.post.title = this.postService.find('1'); // Some id or title based search
     };
-    HomeComponent.prototype.selectPost = function (post) {
-        this.selectedPost = post;
-    };
-    HomeComponent.prototype.getPosts = function () {
-        return this.posts;
-    };
-    HomeComponent = __decorate([
+    PostViewComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/components/home/home.component.html'
+            selector: 'post',
+            templateUrl: 'app/components/postView/post.component.html'
         }), 
         __metadata('design:paramtypes', [post_service_1.PostService])
-    ], HomeComponent);
-    return HomeComponent;
+    ], PostViewComponent);
+    return PostViewComponent;
 }());
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+exports.PostViewComponent = PostViewComponent;
+//# sourceMappingURL=post-view.component.js.map

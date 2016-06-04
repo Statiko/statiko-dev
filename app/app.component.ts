@@ -4,6 +4,8 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
 import { HomeComponent } from './components/home/home.component';
 import { PostService } from './components/home/post.service';
 
+import { PostViewComponent } from './components/postView/post-view.component';
+
 import { AppConfig } from './config/app';
 
 
@@ -26,6 +28,11 @@ import { AppConfig } from './config/app';
 		path: '/',
 		name: 'Home',
 		component: HomeComponent
+	},
+	{
+		path: '/:post',
+		name: 'Post',
+		component: PostViewComponent
 	}
 ])
 

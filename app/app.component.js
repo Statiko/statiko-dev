@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var home_component_1 = require('./components/home/home.component');
 var post_service_1 = require('./components/home/post.service');
+var post_view_component_1 = require('./components/postView/post-view.component');
 var app_1 = require('./config/app');
 var AppComponent = (function () {
     function AppComponent() {
@@ -32,6 +33,11 @@ var AppComponent = (function () {
                 path: '/',
                 name: 'Home',
                 component: home_component_1.HomeComponent
+            },
+            {
+                path: '/:post',
+                name: 'Post',
+                component: post_view_component_1.PostViewComponent
             }
         ]), 
         __metadata('design:paramtypes', [])
