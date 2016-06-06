@@ -2,7 +2,7 @@ import { Component }       from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { HomeComponent } from './components/home/home.component';
-import { PostService } from './components/home/post.service';
+import { PostService } from './services/post.service';
 
 import { PostViewComponent } from './components/postView/post-view.component';
 

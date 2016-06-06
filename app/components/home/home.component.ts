@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 import {Post} from "../../models/post";
 
-import { PostService } from "./post.service"
+import { PostService } from "../../services/post.service"
 
 @Component({
 	selector: 'my-app',
