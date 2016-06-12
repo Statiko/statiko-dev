@@ -43,12 +43,12 @@ export class PostService {
 	 * posts array
 	 * 
 	 */
-	private find( slug : string ){
+	private find( slug : string ) : any {
 
 		var result = 0;
 
-		this.posts.map(function(value: Post, index: number) {
-			if (value.files[slug] != NULL)
+		this.posts.map(function(value, index: number) {
+			if (value.files[slug] != null)
 				result = value.files[slug].raw_url;
 
 		});
@@ -75,6 +75,8 @@ export class PostService {
 		else {
 			// Throw error
 		}
+
+		return ""
 
 	}
 }

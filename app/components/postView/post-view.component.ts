@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 import {Post} from "../../models/post";
 
-import { PostService } from "../home/post.service"
+import { PostService } from "../../services/post.service"
 
 @Component({
 	selector: 'post',
@@ -19,7 +19,7 @@ export class PostViewComponent {
 
 	ngOnInit() {
 
-		this.post.title = this.postService.find('1'); // Some id or title based search
+		this.post.title = this.postService.getPost('1'); // Some id or title based search
 	}
 
 }

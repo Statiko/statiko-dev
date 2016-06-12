@@ -9,15 +9,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var posts_1 = require("../../database/posts");
 var PostService = (function () {
     function PostService() {
     }
-    PostService.prototype.getPosts = function () {
-        return posts_1.POSTS;
+    /**
+     * Fetch posts from github api
+     */
+    PostService.prototype.fetchPosts = function () {
+        // Load Data using AppConfig.gitname
+        // 
+        this.posts = []; //data to store here
     };
+    /**
+     * Return Posts array
+     */
+    PostService.prototype.getPosts = function () {
+        return this.posts;
+    };
+    /**
+     * Find a post from slug from posts
+     * @param {string} slug slug of blog post
+     *
+     * Note : This app assumes that if you have slug of the blog post
+     * then you must have already fetched the list and have the data in your
+     * posts array
+     *
+     */
     PostService.prototype.find = function (slug) {
-        return 'Temp';
+        var result = 0;
+        this.posts.map(function (value, index) {
+            if (value.files[slug] != null)
+                result = value.files[slug].raw_url;
+        });
+        if (result !== 0)
+            return result;
+        else
+            return false;
+    };
+    /**
+     * Get full post blog by slug provided
+     */
+    PostService.prototype.getPost = function (slug) {
+        var present = this.find(slug);
+        if (present !== false) {
+        }
+        else {
+        }
+        return "";
     };
     PostService = __decorate([
         core_1.Injectable(), 

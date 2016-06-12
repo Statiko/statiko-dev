@@ -9,13 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var post_service_1 = require("../home/post.service");
+var post_service_1 = require("../../services/post.service");
 var PostViewComponent = (function () {
     function PostViewComponent(postService) {
         this.postService = postService;
     }
     PostViewComponent.prototype.ngOnInit = function () {
-        this.post.title = this.postService.find('1'); // Some id or title based search
+        this.post.title = this.postService.getPost('1'); // Some id or title based search
     };
     PostViewComponent = __decorate([
         core_1.Component({

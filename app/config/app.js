@@ -17,23 +17,6 @@ exports.AppConfig = {
         |  Description of you app
         |
         */
-    description: "Simple, Static, Angular Based App",
-
-
-    /*
-        |--------------------------------------------------------------------------
-        | GitHub Username
-        |--------------------------------------------------------------------------
-        |
-        |  username of github account
-        |
-        */
-       
-    gitname: 'statiko',
-
-
-
-
-       
+    description: "Simple, Static, Angular Based App"
 };
 //# sourceMappingURL=app.js.map
